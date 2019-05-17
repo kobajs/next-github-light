@@ -5,25 +5,25 @@ import { snackbarVariants }  from 'sontra-components/dist/Snackbar/snackbarVaria
 import SnackbarMessage from '../../entities/SnackbarMessage';
 import UnknownError from '../../entities/Error/UnknownError';
 
-import { OPEN_SNACKBAR, CLOSE_SNACKBAR, CLEAN_SNACKBAR } from '../actions/snackbarActions';
+import { OPEN_SNACKBAR, CLOSE_SNACKBAR, CLEAN_SNACKBAR } from '../types/snackbarTypes';
 
-function openSnackbarAction(payload) {
+function openSnackbarCreator(payload) {
   return { type: OPEN_SNACKBAR, payload };
 }
-function closeSnackbarAction() {
+function closeSnackbarCreator() {
   return { type: CLOSE_SNACKBAR };
 }
-function cleanSnackbarAction() {
+function cleanSnackbarCreator() {
   return { type: CLEAN_SNACKBAR };
 }
 
 export const openSnackbar = (message, variant) => dispatch => {
-  dispatch(openSnackbarAction({ message, variant }));
+  dispatch(openSnackbarCreator({ message, variant }));
 };
 
-export const closeSnackbar = () => dispatch => dispatch(closeSnackbarAction());
+export const closeSnackbar = () => dispatch => dispatch(closeSnackbarCreator());
 
-export const cleanSnackbar = () => dispatch => dispatch(cleanSnackbarAction());
+export const cleanSnackbar = () => dispatch => dispatch(cleanSnackbarCreator());
 
 export const prepareError = error => (get(error, 'message') ? error : new UnknownError(error));
 export const createError = (error, dispatch) => {

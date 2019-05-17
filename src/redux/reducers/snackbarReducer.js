@@ -1,6 +1,6 @@
-import { snackbarVariants }  from 'sontra-components/dist/Snackbar/snackbarVariants';
+import { snackbarVariants }  from '../../src/components/Snackbar/snackbarVariants';
 
-import { OPEN_SNACKBAR, CLOSE_SNACKBAR, CLEAN_SNACKBAR } from '../actions/snackbarActions';
+import { OPEN_SNACKBAR, CLOSE_SNACKBAR, CLEAN_SNACKBAR } from '../types/snackbarTypes';
 
 const initialState = {
   open: false,

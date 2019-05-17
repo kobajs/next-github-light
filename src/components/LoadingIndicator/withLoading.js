@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 
 import LoadingIndicator from 'sontra-components/dist/LoadingIndicator';
-import { cleanLoader } from '../../redux/creators/loaderCreators';
+import { cleanLoader } from '../../redux/actions/loaderTypes';
 
 function withLoading(Component) {
   class WrappedComponent extends React.Component {

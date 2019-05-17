@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Snackbar  from '.';
 
-import { closeSnackbar, cleanSnackbar, createSnackbarMessage } from '../../redux/creators/snackbarCreators';
+import { closeSnackbar, cleanSnackbar, createSnackbarMessage } from '../../redux/actions/snackbarTypes';
 
 export function withSnackbar(Component) {
   class WrappedComponent extends React.Component {

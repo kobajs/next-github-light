@@ -1,4 +1,4 @@
-import { SET_LOADER, CLEAN_LOADER } from '../actions/loaderActions';
+import { SET_LOADER, CLEAN_LOADER } from '../types/loaderTypes';
 
 function setLoaderAction(payload) {
   return { type: SET_LOADER, payload };
