@@ -9,6 +9,6 @@ export default function configureStore(initialState = undefined, options) {
   return createStore(
     createRootReducer(),
     initialState,
-    composeWithDevTools(applyMiddleware(thunk, logger)),
+    composeWithDevTools(applyMiddleware(thunk)),
   );
 }

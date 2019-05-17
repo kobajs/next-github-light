@@ -1,4 +1,4 @@
-import { snackbarVariants }  from '../../src/components/Snackbar/snackbarVariants';
+import { snackbarVariants }  from '../../components/Snackbar/snackbarVariants';
 
 import { OPEN_SNACKBAR, CLOSE_SNACKBAR, CLEAN_SNACKBAR } from '../types/snackbarTypes';
 

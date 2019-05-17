@@ -1,17 +1,18 @@
 import React from "react";
-import { connect } from "react-redux";
+
 import { getRepositoriesAction } from "../src/redux/actions/repositoriesActions";
+import Repositories from "../src/components/Repositories";
 
 function Page(props) {
   return (
     <div>
-      <p>oi</p>
+      <Repositories />
     </div>
   );
 }
 
-Page.getInitialProps = ({ store, req }) => {
-  store.dispatch(getRepositoriesAction())
+Page.getInitialProps = async ({ store, req }) => {
+  await store.dispatch(getRepositoriesAction())
 }
 
-export default connect(state => state)(Page);
+export default Page;

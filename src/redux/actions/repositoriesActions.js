@@ -7,7 +7,7 @@ function getRepositoriesCreator(payload) {
 }
 
 export const getRepositoriesAction = () => async (dispatch) => {
-  const res = await fetch('https://api.github.com/users/yuritk/repos')
-  const json = await res.json();
-  dispatch(getRepositoriesCreator({json}));
+  return fetch('https://api.github.com/users/yuritk/repos')
+    .then(res => res.json())
+    .then(data => dispatch(getRepositoriesCreator({data})))
 }
