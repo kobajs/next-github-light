@@ -1,234 +1,94 @@
-This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
+This is a lighter version of Github, proposed by a job challenge.
 
-Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.
+## Challenge
 
-## Table of Contents
+A description of what is expected and what I marked as I could possibly do.
 
-- [Questions? Feedback?](#questions-feedback)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [npm run dev](#npm-run-dev)
-  - [npm run build](#npm-run-build)
-  - [npm run start](#npm-run-start)
-- [Using CSS](#using-css)
-- [Adding Components](#adding-components)
-- [Fetching Data](#fetching-data)
-- [Custom Server](#custom-server)
-- [Syntax Highlighting](#syntax-highlighting)
-- [Using the `static` Folder](#using-the-static-folder)
-- [Deploy to Now](#deploy-to-now)
-- [Something Missing?](#something-missing)
+### Requisites
 
-## Questions? Feedback?
+- [ ] Connect to Github API;
 
-Check out [Next.js FAQ & docs](https://github.com/zeit/next.js#faq) or [let us know](https://github.com/segmentio/create-next-app/issues) your feedback.
+- [ ] List all public repositories from an user (first version: reactjs user);
 
-## Folder Structure
+- [ ] List all the last 20 commits of repo after being clicked;
 
-After creating an app, it should look something like:
+- [ ] Commits list should have a search field;
 
-```
-.
-├── README.md
-├── components
-│   ├── head.js
-│   └── nav.js
-├── next.config.js
-├── node_modules
-│   ├── [...]
-├── package.json
-├── pages
-│   └── index.js
-├── static
-│   └── favicon.ico
-└── yarn.lock
-```
+### Bonus Tasks
 
-Routing in Next.js is based on the file system, so `./pages/index.js` maps to the `/` route and
-`./pages/about.js` would map to `/about`.
+- [ ] Use some modern css solution (CSS Modules, Styled-components, etc);
 
-The `./static` directory maps to `/static` in the `next` server, so you can put all your
-other static resources like images or compiled CSS in there.
+- [ ] Endless scrolling for the commits page;
 
-Out of the box, we get:
+- [ ] Make it possible to change the order the repositories are shown (By stars, name, etc);
 
-- Automatic transpilation and bundling (with webpack and babel)
-- Hot code reloading
-- Server rendering and indexing of `./pages`
-- Static file serving. `./static/` is mapped to `/static/`
+- [ ] Component Library (Storybook.js, Styleguidist, etc);
 
-Read more about [Next's Routing](https://github.com/zeit/next.js#routing)
+- [ ] Server side rendering;
+
+### Solution
+- [ ] Use reactjs, you can start with a simple create-react-app structure and work from there;
+
+- [ ] Use some state managing solution;
+
+- [ ] Use ES6+ features and write down in the readme why you used and for what, for at least 2 of them;
+
+- [ ] Write unit tests and any other test you may find helpful or important to have;
+
+- [ ] Keep performance and corner cases in mind;
+
+- [ ] Be creative and show us what you got;
+
+### Personal Bonus Tasks
+
+- [ ] List events;
+
+- [ ] Search user repo;
+
+- [ ] Search repo;
+
+- [ ] Search user;
+
+## Stack
+
+It will be used:
+
+- [CRA](https://github.com/facebook/create-react-app): The most common React boilerplate
+
+- [ReactJS](https://reactjs.org/): A modern web development framework
+
+- [Redux](https://redux.js.org/): For state management
+
+- [Github API](https://developer.github.com/v3/): The API that the project is connected
+
+- [Material-UI](https://material-ui.com/): The most popular React UI framework - Removed, changed theming functions to styled-components
+
+- [Styled-Components](https://www.styled-components.com/): Styles CSS as a component
+
+- [TypeScript](https://www.typescriptlang.org/): Typed superset of JavaScript - Removed, already added NextJS for SSR (hard work)
+
+- [Jest](https://jestjs.io/): A JavaScript testing framework
+
+- [Storybook](https://github.com/storybooks/storybook): Its a components exposed book
+
+This is the main stack of the project, it will be based on scalability (not as a simple challenge!)
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm run dev`
+### `yarn dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
-You will also see any errors in the console.
+You will also see any lint errors in the console.
 
-### `npm run build`
+### `yarn build`
 
-Builds the app for production to the `.next` folder.<br>
+Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm run start`
-
-Starts the application in production mode.
-The application should be compiled with \`next build\` first.
-
-See the section in Next docs about [deployment](https://github.com/zeit/next.js/wiki/Deployment) for more information.
-
-## Using CSS
-
-[`styled-jsx`](https://github.com/zeit/styled-jsx) is bundled with next to provide support for isolated scoped CSS. The aim is to support "shadow CSS" resembling of Web Components, which unfortunately [do not support server-rendering and are JS-only](https://github.com/w3c/webcomponents/issues/71).
-
-```jsx
-export default () => (
-  <div>
-    Hello world
-    <p>scoped!</p>
-    <style jsx>{`
-      p {
-        color: blue;
-      }
-      div {
-        background: red;
-      }
-      @media (max-width: 600px) {
-        div {
-          background: blue;
-        }
-      }
-    `}</style>
-  </div>
-)
-```
-
-Read more about [Next's CSS features](https://github.com/zeit/next.js#css).
-
-## Adding Components
-
-We recommend keeping React components in `./components` and they should look like:
-
-### `./components/simple.js`
-
-```jsx
-const Simple = () => <div>Simple Component</div>
-
-export default Simple // don't forget to export default!
-```
-
-### `./components/complex.js`
-
-```jsx
-import { Component } from 'react'
-
-class Complex extends Component {
-  state = {
-    text: 'World'
-  }
-
-  render() {
-    const { text } = this.state
-    return <div>Hello {text}</div>
-  }
-}
-
-export default Complex // don't forget to export default!
-```
-
-## Fetching Data
-
-You can fetch data in `pages` components using `getInitialProps` like this:
-
-### `./pages/stars.js`
-
-```jsx
-const Page = props => <div>Next stars: {props.stars}</div>
-
-Page.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  const json = await res.json()
-  const stars = json.stargazers_count
-  return { stars }
-}
-
-export default Page
-```
-
-For the initial page load, `getInitialProps` will execute on the server only. `getInitialProps` will only be executed on the client when navigating to a different route via the `Link` component or using the routing APIs.
-
-_Note: `getInitialProps` can **not** be used in children components. Only in `pages`._
-
-Read more about [fetching data and the component lifecycle](https://github.com/zeit/next.js#fetching-data-and-component-lifecycle)
-
-## Custom Server
-
-Want to start a new app with a custom server? Run `create-next-app --example customer-server custom-app`
-
-Typically you start your next server with `next start`. It's possible, however, to start a server 100% programmatically in order to customize routes, use route patterns, etc
-
-This example makes `/a` resolve to `./pages/b`, and `/b` resolve to `./pages/a`:
-
-```jsx
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
-
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
-
-app.prepare().then(() => {
-  createServer((req, res) => {
-    // Be sure to pass `true` as the second argument to `url.parse`.
-    // This tells it to parse the query portion of the URL.
-    const parsedUrl = parse(req.url, true)
-    const { pathname, query } = parsedUrl
-
-    if (pathname === '/a') {
-      app.render(req, res, '/b', query)
-    } else if (pathname === '/b') {
-      app.render(req, res, '/a', query)
-    } else {
-      handle(req, res, parsedUrl)
-    }
-  }).listen(3000, err => {
-    if (err) throw err
-    console.log('> Ready on http://localhost:3000')
-  })
-})
-```
-
-Then, change your `start` script to `NODE_ENV=production node server.js`.
-
-Read more about [custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing)
-
-## Syntax Highlighting
-
-To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
-
-## Deploy to Now
-
-[now](https://zeit.co/now) offers a zero-configuration single-command deployment.
-
-1.  Install the `now` command-line tool either via the recommended [desktop tool](https://zeit.co/download) or via node with `npm install -g now`.
-
-2.  Run `now` from your project directory. You will see a **now.sh** URL in your output like this:
-
-    ```
-    > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
-    ```
-
-    Paste that URL into your browser when the build is complete, and you will see your deployed app.
-
-You can find more details about [`now` here](https://zeit.co/now).
-
-## Something Missing?
-
-If you have ideas for how we could improve this readme or the project in general, [let us know](https://github.com/segmentio/create-next-app/issues) or [contribute some!](https://github.com/segmentio/create-next-app/edit/master/lib/templates/default/README.md)
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
