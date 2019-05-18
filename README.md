@@ -1,88 +1,94 @@
 This is a lighter version of Github, proposed by a job challenge.
 
-Challenge
+## Challenge
+
 A description of what is expected and what I marked as I could possibly do.
 
-Requisites
- Connect to Github API;
+### Requisites
 
- List all public repositories from an user (first version: reactjs user);
+- [ ] Connect to Github API;
 
- List all the last 20 commits of repo after being clicked;
+- [ ] List all public repositories from an user (first version: reactjs user);
 
- Commits list should have a search field;
+- [ ] List all the last 20 commits of repo after being clicked;
 
-Bonus Tasks
- Use some modern css solution (CSS Modules, Styled-components, etc);
+- [ ] Commits list should have a search field;
 
- Endless scrolling for the commits page;
+### Bonus Tasks
 
- Make it possible to change the order the repositories are shown (By stars, name, etc);
+- [ ] Use some modern css solution (CSS Modules, Styled-components, etc);
 
- Component Library (Storybook.js, Styleguidist, etc);
+- [ ] Endless scrolling for the commits page;
 
- Server side rendering;
+- [ ] Make it possible to change the order the repositories are shown (By stars, name, etc);
 
-Solution
- Use reactjs, you can start with a simple create-react-app structure and work from there;
+- [ ] Component Library (Storybook.js, Styleguidist, etc);
 
- Use some state managing solution;
+- [ ] Server side rendering;
 
- Use ES6+ features and write down in the readme why you used and for what, for at least 2 of them;
+### Solution
+- [ ] Use reactjs, you can start with a simple create-react-app structure and work from there;
 
- Write unit tests and any other test you may find helpful or important to have;
+- [ ] Use some state managing solution;
 
- Keep performance and corner cases in mind;
+- [ ] Use ES6+ features and write down in the readme why you used and for what, for at least 2 of them;
 
- Be creative and show us what you got;
+- [ ] Write unit tests and any other test you may find helpful or important to have;
 
-Personal Bonus Tasks
- List events;
+- [ ] Keep performance and corner cases in mind;
 
- Search user repo;
+- [ ] Be creative and show us what you got;
 
- Search repo;
+### Personal Bonus Tasks
 
- Search user;
+- [ ] List events;
 
-Stack
+- [ ] Search user repo;
+
+- [ ] Search repo;
+
+- [ ] Search user;
+
+## Stack
+
 It will be used:
 
-CRA: The most common React boilerplate
+- [CRA](https://github.com/facebook/create-react-app): The most common React boilerplate
 
-ReactJS: A modern web development framework
+- [ReactJS](https://reactjs.org/): A modern web development framework
 
-Redux: For state management
+- [Redux](https://redux.js.org/): For state management
 
-Github API: The API that the project is connected
+- [Github API](https://developer.github.com/v3/): The API that the project is connected
 
-Material-UI: The most popular React UI framework - Removed, theming functions changed to styled-components
+- [Material-UI](https://material-ui.com/): The most popular React UI framework - Removed, changed theming functions to styled-components
 
-Styled-Components: Styles CSS as a component
+- [Styled-Components](https://www.styled-components.com/): Styles CSS as a component
 
-TypeScript: Typed superset of JavaScript - Removed, added to scope NextJS (it's already hard work)
+- [TypeScript](https://www.typescriptlang.org/): Typed superset of JavaScript - Removed, already added NextJS for SSR (hard work)
 
-Jest: A JavaScript testing framework
+- [Jest](https://jestjs.io/): A JavaScript testing framework
 
-Storybook: Its a components exposed book
+- [Storybook](https://github.com/storybooks/storybook): Its a components exposed book
 
 This is the main stack of the project, it will be based on scalability (not as a simple challenge!)
 
-Available Scripts
+## Available Scripts
+
 In the project directory, you can run:
 
-npm dev
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+### `yarn dev`
 
-The page will reload if you make edits.
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-yarn build
-Builds the app for production to the build folder.
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.
+The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
-
-See the section about deployment for more information.
