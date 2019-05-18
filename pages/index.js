@@ -4,6 +4,7 @@ import { getRepositoriesAction } from "../src/redux/actions/repositoriesActions"
 import Repositories from "../src/components/Repositories";
 
 function Page(props) {
+  console.log(props)
   return (
     <div>
       <Repositories />
@@ -12,7 +13,7 @@ function Page(props) {
 }
 
 Page.getInitialProps = async ({ store, req }) => {
-  await store.dispatch(getRepositoriesAction())
-}
+  await store.dispatch(getRepositoriesAction());
+};
 
 export default Page;

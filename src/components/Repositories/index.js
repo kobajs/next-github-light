@@ -2,13 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 
 function Repositories(props) {
-  console.log(props)
   const { repositories } = props;
+  console.log(repositories)
 
   return (
     <div>
       <h5>Repositories</h5>
-      {repositories.data.map(r => (
+      {/* {repositories.data.map(r => (
         <div key={r.id}>
           <p>{r.id}</p>
           <p>{r.node_id}</p>
@@ -23,7 +23,7 @@ function Repositories(props) {
           <p>{r.forks_count}</p>
           <p>{r.homepage}</p>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }
