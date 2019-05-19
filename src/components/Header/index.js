@@ -1,23 +1,17 @@
 import React from "react";
-import Link from 'next/link';
-
-import GithubSvg from '../../../static/github.svg'
+import Link from "next/link";
 
 import * as Styled from "./Header.styles";
 
 function Header(props) {
-  console.log(props);
   return (
     <Styled.Wrapper>
-      <Link style={{ fill: 'white'}} href="/">
-        <a>
-        <GithubSvg />
-        Github Light
-        </a>
+      <Link href="/">
+        <Styled.LinkWrapper>
+          <Styled.GitHubIcon />
+          <Styled.Title>Github Light</Styled.Title>
+        </Styled.LinkWrapper>
       </Link>
-      {/* <Styled.SearchWrapper>
-        <Styled.SearchInput />
-      </Styled.SearchWrapper> */}
     </Styled.Wrapper>
   );
 }

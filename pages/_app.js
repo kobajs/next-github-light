@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import configureStore from "../src/redux/configureStore";
 import Header from "../src/components/Header";
+import MainContent from "../src/components/MainContent";
 import ThemeProvider from "../src/theme/ThemeProvider";
 
 class MyApp extends App {
@@ -22,7 +23,9 @@ class MyApp extends App {
         <Provider store={store}>
           <ThemeProvider>
             <Header {...pageProps} />
-            <Component {...pageProps} />
+            <MainContent>
+              <Component {...pageProps} />
+            </MainContent>
           </ThemeProvider>
         </Provider>
       </Container>

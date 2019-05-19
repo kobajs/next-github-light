@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <style>{`body { margin: 0 } * { box-sizing: border-box }`}</style>
+          <style>{`body { margin: 0 } * { box-sizing: border-box } * { font-family: Roboto } `}</style>
         </Head>
         <body className="custom_class">
           <Main />
