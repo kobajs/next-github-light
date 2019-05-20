@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import { ROUTES } from "../../src/router/routes";
 import SearchForm from "../../src/components/SearchForm";
@@ -7,12 +8,13 @@ import Wrapper from "../../src/components/Wrapper";
 import Repositories from "./Repositories";
 
 function Page({ query }) {
-  const {
-    user
-  } = query;
+  const { user } = query;
 
   return (
     <Wrapper>
+      <Head>
+        <title>Repositories</title>
+      </Head>
       <SearchForm />
       <Repositories user={user} />
     </Wrapper>
@@ -20,11 +22,11 @@ function Page({ query }) {
 }
 
 Page.getInitialProps = async ({ store, query, res }) => {
-  await store.dispatch(getRepositoriesAction(query))
+  await store.dispatch(getRepositoriesAction(query));
 
   return {
-    query,
-  }
+    query
+  };
 };
 
 export default Page;

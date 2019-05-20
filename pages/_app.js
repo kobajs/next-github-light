@@ -4,6 +4,9 @@ import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import NProgress from "nprogress";
 import Router from "next/router";
+import NextSeo from 'next-seo';
+
+import SEO from '../next-seo.config';
 
 import configureStore from "../src/redux/configureStore";
 import Header from "../src/components/Header";
@@ -29,6 +32,7 @@ class MyApp extends App {
       <Container>
         <Provider store={store}>
           <ThemeProvider>
+             <NextSeo config={SEO} />
             <Header {...pageProps} />
             <MainContent>
               <Component {...pageProps} />

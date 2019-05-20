@@ -33,7 +33,13 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <style>{`body { margin: 0 } * { box-sizing: border-box } * { font-family: Roboto } `}</style>
-          <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
+          <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+            key="viewport"
+          />
+          <meta name="description" content="A lighter version of Github" />
         </Head>
         <body className="custom_class">
           <Main />

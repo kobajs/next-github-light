@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import { ROUTES } from "../../src/router/routes";
 import { searchUsersAction } from "../../src/redux/actions/usersActions";
@@ -10,6 +11,9 @@ import Wrapper from "../../src/components/Wrapper";
 function Page(props) {
   return (
     <Wrapper>
+      <Head>
+        <title>Users</title>
+      </Head>
       <SearchForm />
       <UsersList />
     </Wrapper>
@@ -17,7 +21,7 @@ function Page(props) {
 }
 
 Page.getInitialProps = async ({ store, query, res }) => {
-  needsQuery(query, res)
+  needsQuery(query, res);
   await store.dispatch(searchUsersAction(query));
 };
 
