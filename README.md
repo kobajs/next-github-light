@@ -33,11 +33,11 @@ A description of what is expected and what I marked as I could possibly do.
 
 - [x] Use ES6+ features and write down in the readme why you used and for what, for at least 2 of them; -> It will be discussed in the end of README
 
-- [ ] Write unit tests and any other test you may find helpful or important to have;
+- [ ] Write unit tests and any other test you may find helpful or important to have; -> Dont have time
 
-- [ ] Keep performance and corner cases in mind;
+- [X] Keep performance and corner cases in mind;
 
-- [ ] Be creative and show us what you got;
+- [X] Be creative and show us what you got;
 
 ### Personal Bonus Tasks
 
