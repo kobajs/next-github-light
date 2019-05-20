@@ -49,6 +49,8 @@ A description of what is expected and what I marked as I could possibly do.
 
 - [x] Search user;
 
+- [ ] Organize code, extracting solid components, APIs and entities/models
+
 ## Stack
 
 It will be used:
