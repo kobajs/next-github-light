@@ -12,6 +12,7 @@ export const Card = styled(DefaultCard)`
 
   & p, h4 {
     margin: 0;
+    word-break: break-word;
   }
 `;
 
