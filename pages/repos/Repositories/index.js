@@ -30,15 +30,16 @@ function Repositories({ user, repositories }) {
       </Styled.Indicator>
     );
   }
+
   return (
     <div style={{ width: "100%" }}>
       <h3>Repositories</h3>
       <Styled.List>
-        {repositories.map(r => (
+        {repositories.items.map(r => (
           <Styled.Card key={r.id} onClick={() => goToCommits(r.name)}>
             <Styled.Info>
               <Styled.Title>
-                {user} / <strong>{r.name}</strong>
+                {r.owner.login} / <strong>{r.name}</strong>
               </Styled.Title>
               <p>{r.description}</p>
               <p>{r.language}</p>

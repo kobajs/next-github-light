@@ -8,7 +8,12 @@ export const List = styled.div``;
 export const Card = styled(DefaultCard)`
   display: flex;
   flex-wrap: wrap;
-  padding: ${theme('spacing.unit')}px ${theme('spacing.double')}px;
+  word-break: break-word;
+  padding: ${theme("spacing.unit")}px ${theme("spacing.double")}px;
+
+  ${bp("sm")} {
+    flex-wrap: nowrap;
+  }
 `;
 
 export const Title = styled.p`
@@ -19,7 +24,9 @@ export const Title = styled.p`
   }
 `;
 
-export const Info = styled.div``;
+export const Info = styled.div`
+  padding: 0 12px 12px;
+`;
 
 export const Indicators = styled.div`
   margin: ${theme("spacing.double")}px ${theme("spacing.unit")}px 0;

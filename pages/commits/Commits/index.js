@@ -6,20 +6,25 @@ import { timeFromNow } from "../../../src/lib/moment";
 
 function Commits({ commits }) {
   function goToGithubCommitPage(url) {
-    window.open(url)
+    window.open(url);
   }
 
   return (
     <div style={{ width: "100%" }}>
       <h3>Commits</h3>
       <Styled.List>
-        {commits.map(c => (
-          <Styled.Card onClick={() => goToGithubCommitPage(c.html_url)} >
+        {commits.items.map(c => (
+          <Styled.Card
+            key={c.node_id}
+            onClick={() => goToGithubCommitPage(c.html_url)}
+          >
             <p>{c.commit.message}</p>
             <Styled.RightInfo>
-              <Styled.Avatar src={c.author.avatar_url} />
+              {c.author && <Styled.Avatar src={c.author.avatar_url} />}
               <p>
-                <strong>{c.author.login}</strong>
+                <strong>
+                  {(c.author && c.author.login) || c.commit.author.email}
+                </strong>{" "}
                 {timeFromNow(c.commit.author.date)}
               </p>
             </Styled.RightInfo>

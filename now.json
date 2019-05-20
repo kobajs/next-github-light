@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "name": "Github Light",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+}

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import TextInput from '../Inputs/TextInput';
-import { bp } from '../../lib/styled';
+import TextInput from "../Inputs/TextInput";
+import { bp, theme } from "../../lib/styled";
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -12,14 +12,19 @@ export const FormWrapper = styled.form`
   width: 100%;
 `;
 
+export const Buttons = styled.div`
+  display: flex;
+  margin-bottom: ${theme('spacing.double')}px;
+`;
+
 export const SearchInput = styled(TextInput)`
   background-color: white;
-  background-image: url('../../../static/baseline-search-24px.svg');
-  background-position: 10px 10px; 
+  background-image: url("../../../static/baseline-search-24px.svg");
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   max-width: 400px;
 
-  ${bp('xs')} {
+  ${bp("xs")} {
     width: 90%;
   }
-`
+`;

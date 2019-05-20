@@ -10,7 +10,7 @@ import Wrapper from "../../src/components/Wrapper";
 function Page(props) {
   return (
     <Wrapper>
-      <SearchForm to={ROUTES.USERS} />
+      <SearchForm />
       <UsersList />
     </Wrapper>
   );

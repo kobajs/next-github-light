@@ -2,10 +2,17 @@ import React, { Fragment } from "react";
 import App, { Container } from "next/app";
 import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
+import NProgress from "nprogress";
+import Router from "next/router";
+
 import configureStore from "../src/redux/configureStore";
 import Header from "../src/components/Header";
 import MainContent from "../src/components/MainContent";
 import ThemeProvider from "../src/theme/ThemeProvider";
+
+Router.events.on("routeChangeStart", url => NProgress.start());
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

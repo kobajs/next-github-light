@@ -6,7 +6,7 @@ export default function repositoriesReducer(state = initialState, action = {}) {
   switch (action.type) {
     case SEARCH_USERS:
       return {
-        ...action.payload.users
+        ...action.payload.data
       };
     default:
       return state;

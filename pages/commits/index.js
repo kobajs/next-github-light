@@ -14,7 +14,7 @@ function Page({ query }) {
 
   return (
     <Wrapper>
-      <SearchForm to={ROUTES.COMMITS} />
+      <SearchForm />
       <Commits />
     </Wrapper>
   );

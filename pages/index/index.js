@@ -12,7 +12,7 @@ function Page(props) {
       <ContentWrapper>
         <Introduction />
       </ContentWrapper>
-      <SearchForm to={ROUTES.USERS} />
+      <SearchForm />
     </Wrapper>
   );
 }

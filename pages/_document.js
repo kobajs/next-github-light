@@ -33,6 +33,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <style>{`body { margin: 0 } * { box-sizing: border-box } * { font-family: Roboto } `}</style>
+          <link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
         </Head>
         <body className="custom_class">
           <Main />

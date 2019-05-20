@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
 import * as Styled from "./UsersList.styles";
@@ -8,6 +8,7 @@ function UsersList({ users }) {
   function renderList() {
     return users.items.map(user => <UserItem key={user.id} {...user} />);
   }
+
   return (
     <div>
       <Styled.TotalCount>Total: {users.total_count}</Styled.TotalCount>

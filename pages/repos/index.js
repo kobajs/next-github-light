@@ -13,7 +13,7 @@ function Page({ query }) {
 
   return (
     <Wrapper>
-      <SearchForm to={ROUTES.COMMITS} />
+      <SearchForm />
       <Repositories user={user} />
     </Wrapper>
   );
