@@ -8,13 +8,13 @@ import Repositories from "./Repositories";
 
 function Page({ query }) {
   const {
-    username
+    user
   } = query;
 
   return (
     <Wrapper>
       <SearchForm to={ROUTES.COMMITS} />
-      <Repositories username={username} />
+      <Repositories user={user} />
     </Wrapper>
   );
 }

@@ -8,13 +8,13 @@ function getRepositoriesCreator(payload) {
 
 export const getRepositoriesAction = (query) => async dispatch => {
   const {
-    username,
+    user,
   } = query;
   return new Promise(res => {
     dispatch(getRepositoriesCreator({ data: repositoriesFixture }));
     res()
   });
-  // return fetch(`https://api.github.com/users/${username}/repos`)
+  // return fetch(`https://api.github.com/users/${user}/repos`)
   //   .then(res => res.json())
   //   .then(data => dispatch(getRepositoriesCreator({data})))
 };
