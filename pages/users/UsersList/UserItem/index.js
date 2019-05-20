@@ -3,8 +3,6 @@ import Router from "next/router";
 
 import * as Styled from "./UserItem.styles";
 import { ROUTES } from "../../../../src/router/routes";
-import Card from "../../../../src/components/Card";
-import Avatar from "../../../../src/components/Avatar";
 
 function UserItem({ avatar_url, login }) {
   function goToRepositories() {
@@ -16,12 +14,12 @@ function UserItem({ avatar_url, login }) {
     });
   }
   return (
-    <Card onClick={goToRepositories}>
+    <Styled.Card onClick={goToRepositories}>
       <Styled.UserItemContent>
-        <Avatar src={avatar_url} />
+        <Styled.Avatar src={avatar_url} />
         <Styled.Username>{login}</Styled.Username>
       </Styled.UserItemContent>
-    </Card>
+    </Styled.Card>
   );
 }
 
