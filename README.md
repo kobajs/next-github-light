@@ -6,32 +6,32 @@ A description of what is expected and what I marked as I could possibly do.
 
 ### Requisites
 
-- [ ] Connect to Github API;
+- [x] Connect to Github API;
 
-- [ ] List all public repositories from an user (first version: reactjs user);
+- [x] List all public repositories from an user (first version: reactjs user); -> Searched user
 
-- [ ] List all the last 20 commits of repo after being clicked;
+- [x] List all the last 20 commits of repo after being clicked; -> Searched repo
 
-- [ ] Commits list should have a search field;
+- [x] Commits list should have a search field;
 
 ### Bonus Tasks
 
-- [ ] Use some modern css solution (CSS Modules, Styled-components, etc);
+- [x] Use some modern css solution (CSS Modules, Styled-components, etc); -> Styled-components
 
-- [ ] Endless scrolling for the commits page;
+- [ ] Endless scrolling for the commits page; -> See Issues
 
 - [ ] Make it possible to change the order the repositories are shown (By stars, name, etc);
 
 - [ ] Component Library (Storybook.js, Styleguidist, etc);
 
-- [ ] Server side rendering;
+- [x] Server side rendering; -> NextJS
 
 ### Solution
-- [ ] Use reactjs, you can start with a simple create-react-app structure and work from there;
+- [x] Use reactjs, you can start with a simple create-react-app structure and work from there; -> create-next-app
 
-- [ ] Use some state managing solution;
+- [x] Use some state managing solution; -> Redux / Redux-thunk
 
-- [ ] Use ES6+ features and write down in the readme why you used and for what, for at least 2 of them;
+- [x] Use ES6+ features and write down in the readme why you used and for what, for at least 2 of them; -> It will be discussed in the end of README
 
 - [ ] Write unit tests and any other test you may find helpful or important to have;
 
@@ -43,11 +43,11 @@ A description of what is expected and what I marked as I could possibly do.
 
 - [ ] List events;
 
-- [ ] Search user repo;
+- [x] Search user repo;
 
-- [ ] Search repo;
+- [x] Search repo;
 
-- [ ] Search user;
+- [x] Search user;
 
 ## Stack
 
