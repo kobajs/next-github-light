@@ -1,4 +1,8 @@
-This is a lighter version of Github, proposed by a job challenge.
+This is a lighter version of Github.
+
+## Notes from Author
+
+The code was made in 3 days on go-horse mode, so flaw in archtecture aspects and automated tests, so take this into consideration
 
 ## Challenge
 
